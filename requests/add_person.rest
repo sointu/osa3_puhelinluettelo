@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/persons
+POST https://safe-ocean-25676.herokuapp.com/api/persons
 Content-Type: application/json
 
 {
-    "name": "Liisa Liukkonen",
-    "number": 2002002
+    "name": "Joku Muu",
+    "number": "4444"
 }
