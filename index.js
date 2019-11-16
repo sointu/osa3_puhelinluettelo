@@ -1,8 +1,11 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
+const Person = require('./models/person')
 
 const app = express()
 
@@ -102,7 +105,7 @@ res.send(
     )
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, ()=>{
     console.log(`server running in port ${PORT}`)
 })
