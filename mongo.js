@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+
 const password = process.argv[2]
 
 const url = 
@@ -8,9 +9,19 @@ const url =
 mongoose.connect(url, { useNewUrlParser: true })
 
 const personSchema = new mongoose.Schema({
-    name: String,
-    number: Number 
+    name: {
+        type: String,
+        unique: true,
+        minlength: 3
+    },
+    number: {
+        type: Number,
+        minlength: 8
+    }
 })
+
+
+
 
 const Person = mongoose.model('Person', personSchema)
 
