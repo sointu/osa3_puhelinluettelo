@@ -3,9 +3,9 @@ const mongoose = require('mongoose')
 
 const password = process.argv[2]
 
-const url = process.env.MONGODB_URI
 
-//const url = `mongodb+srv://sointu:${password}@cluster0-d1zcd.mongodb.net/puhelinluettelo?retryWrites=true&w=majority`
+
+const url = `mongodb+srv://sointu:${password}@cluster0-d1zcd.mongodb.net/puhelinluettelo?retryWrites=true&w=majority`
 
 mongoose.connect(url, { useNewUrlParser: true })
 
